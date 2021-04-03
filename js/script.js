@@ -1,6 +1,6 @@
-
 //Funkcje
-
+function playGame(playerInput){
+    clearMessages()    
 function getMoveName(argMoveId){
     if(argMoveId == 1){
         return 'kamień';
@@ -8,9 +8,9 @@ function getMoveName(argMoveId){
         return 'papier';
     } else if(argMoveId == 3){
         return 'nożyce';
-    } else {
+    } /*else {
         return 'nieznany ruch'
-    }
+    }*/
 }
 
 function displayResult(argComputerMove, argPlayerMove){
@@ -18,9 +18,9 @@ function displayResult(argComputerMove, argPlayerMove){
         printMessage('Wynik: Ty wygrywasz')
     } else if(argComputerMove == argPlayerMove){
         printMessage('Wynik: Remis')
-    } else if(argPlayerMove == 'nieznany ruch'){
+    } /*else if(argPlayerMove == 'nieznany ruch'){
         printMessage('Wynik: Błędny ruch')
-    } else {
+    }*/ else {
         printMessage('Wynik: Ja wygrywam')
     }
 }
@@ -55,8 +55,8 @@ printMessage('Mój ruch to: ' + argComputerMove);
 //Wybór gracza
 
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-console.log('Gracz wpisał: ' + playerInput);
+/*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+console.log('Gracz wpisał: ' + playerInput);*/
 
 /*
 let playerMove = 'nieznany ruch';
@@ -94,3 +94,13 @@ else {
 }
 */
 displayResult(argComputerMove, argPlayerMove)
+}
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame('kamień');
+  });
+document.getElementById('play-paper').addEventListener('click', function(){
+    playGame('papier');
+  });
+document.getElementById('play-scissors').addEventListener('click', function(){
+    playGame('nożyce');
+  });
