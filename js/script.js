@@ -1,6 +1,6 @@
 //Funkcje
 function playGame(playerInput){
-    clearMessages()    
+    clearMessages()   
 function getMoveName(argMoveId){
     if(argMoveId == 1){
         return 'kamień';
@@ -20,7 +20,7 @@ function displayResult(argComputerMove, argPlayerMove){
         printMessage('Wynik: Remis')
     } /*else if(argPlayerMove == 'nieznany ruch'){
         printMessage('Wynik: Błędny ruch')
-    }*/ else {
+    } */else {
         printMessage('Wynik: Ja wygrywam')
     }
 }
@@ -96,11 +96,11 @@ else {
 displayResult(argComputerMove, argPlayerMove)
 }
 document.getElementById('play-rock').addEventListener('click', function(){
-    playGame('kamień');
+    playGame('1');
   });
 document.getElementById('play-paper').addEventListener('click', function(){
-    playGame('papier');
+    playGame('2');
   });
 document.getElementById('play-scissors').addEventListener('click', function(){
-    playGame('nożyce');
+    playGame('3');
   });
