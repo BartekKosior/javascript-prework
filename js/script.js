@@ -1,7 +1,8 @@
+{
 //Funkcje
-function playGame(playerInput){
+const playGame = function(playerInput){
     clearMessages()   
-function getMoveName(argMoveId){
+const getMoveName = function(argMoveId){
     if(argMoveId == 1){
         return 'kamień';
     } else if(argMoveId == 2){
@@ -13,7 +14,7 @@ function getMoveName(argMoveId){
     }*/
 }
 
-function displayResult(argComputerMove, argPlayerMove){
+const displayResult = function(argComputerMove, argPlayerMove){
     if((argComputerMove == 'nożyce' && argPlayerMove == 'kamień')||(argComputerMove == 'kamień' && argPlayerMove == 'papier')||(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')){
         printMessage('Wynik: Ty wygrywasz')
     } else if(argComputerMove == argPlayerMove){
@@ -27,7 +28,7 @@ function displayResult(argComputerMove, argPlayerMove){
 
 //Losowanie liczby
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 //Wybór komputera
@@ -47,13 +48,10 @@ else if(randomNumber == 3){
 printMessage('Mój ruch to: ' + computerMove);
 */
 
-
-let argComputerMove = getMoveName(randomNumber);
+const argComputerMove = getMoveName(randomNumber);
 printMessage('Mój ruch to: ' + argComputerMove);
 
-
 //Wybór gracza
-
 
 /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Gracz wpisał: ' + playerInput);*/
@@ -74,7 +72,7 @@ else if(playerInput == 3){
 printMessage ('Twój ruch to: ' + playerMove);
 */
 
-let argPlayerMove = getMoveName(playerInput);
+const argPlayerMove = getMoveName(playerInput);
 printMessage('Twój ruch to: ' + argPlayerMove);
 
 //Wynik gry
@@ -104,3 +102,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
     playGame('3');
   });
+}
