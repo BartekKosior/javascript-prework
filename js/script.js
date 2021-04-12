@@ -14,11 +14,11 @@ const playGame = function(playerInput){
 
     const displayResult = function(argComputerMove, argPlayerMove){
         if((argComputerMove == 'nożyce' && argPlayerMove == 'kamień')||(argComputerMove == 'kamień' && argPlayerMove == 'papier')||(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')){
-            printMessage('Wynik: Ty wygrywasz')
+        printMessage('Wynik: Ty wygrywasz')
         } else if(argComputerMove == argPlayerMove){
-            printMessage('Wynik: Remis')
+        printMessage('Wynik: Remis')
         } else {
-            printMessage('Wynik: Ja wygrywam')
+        printMessage('Wynik: Ja wygrywam')
         }
     }
 
@@ -28,13 +28,13 @@ const playGame = function(playerInput){
 
     //Wybór komputera
     const argComputerMove = getMoveName(randomNumber);
-        printMessage('Mój ruch to: ' + argComputerMove);
+    printMessage('Mój ruch to: ' + argComputerMove);
 
     //Wybór gracza
     const argPlayerMove = getMoveName(playerInput);
-        printMessage('Twój ruch to: ' + argPlayerMove);
+    printMessage('Twój ruch to: ' + argPlayerMove);
 
-    //Wynik gry
+        //Wynik gry
     displayResult(argComputerMove, argPlayerMove)
 }
 
